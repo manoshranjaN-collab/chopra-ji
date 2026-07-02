@@ -1,0 +1,12 @@
+node_modules
+.next
+.env*
+*.tsbuildinfo
+.DS_Store
+.vercel
+
+# Original source assets (already copied into /public)
+/photos
+/photos lipas
+/photos for collage
+/phptps lipas vodeo

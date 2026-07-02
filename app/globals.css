@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream-50 text-ink antialiased font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    @apply bg-teal-500/20 text-ink;
+  }
+  /* Headings: Helvetica Neue, bold, tight. No serif. */
+  h1, h2, h3, h4 {
+    @apply font-sans font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  /* The only italic/serif moment on the page — for highlighting 1–3 words. */
+  .accent {
+    @apply font-accent italic font-normal;
+    letter-spacing: -0.01em;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-tight transition-all duration-300 ease-out;
+  }
+  .btn-primary {
+    @apply btn bg-teal-600 text-cream-50 hover:bg-teal-700 hover:shadow-card;
+  }
+  .btn-secondary {
+    @apply btn bg-transparent border border-ink/15 text-ink hover:bg-ink hover:text-cream-50;
+  }
+  .btn-gold {
+    @apply btn bg-gold-400 text-ink hover:bg-gold-500;
+  }
+  .eyebrow {
+    @apply block font-sans font-bold tracking-tight text-2xl sm:text-3xl leading-none text-teal-600;
+  }
+  .section {
+    @apply py-20 sm:py-28;
+  }
+  .hairline {
+    @apply border-t border-line;
+  }
+  .card {
+    @apply rounded-2xl bg-white/60 backdrop-blur-sm border border-line shadow-card;
+  }
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-white/70 px-3 py-1 text-xs text-ink-soft;
+  }
+}
+
+/* Subtle paper texture for hero */
+.paper {
+  background-color: #FBF8F2;
+  background-image:
+    radial-gradient(rgba(14,42,42,0.035) 1px, transparent 1px),
+    radial-gradient(rgba(14,42,42,0.025) 1px, transparent 1px);
+  background-size: 4px 4px, 8px 8px;
+  background-position: 0 0, 2px 2px;
+}

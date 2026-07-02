@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#F1E9D8"/>
+  <g fill="none" stroke="#C9BEA3" stroke-width="2">
+    <circle cx="400" cy="430" r="150"/>
+    <path d="M250 620 Q400 720 550 620" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="400" y="120" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="34" font-weight="700" fill="#9C8F73" letter-spacing="3">BEFORE</text>
+  <text x="400" y="880" text-anchor="middle" font-family="Georgia, serif" font-style="italic" font-size="30" fill="#9C8F73">Add a real photo</text>
+</svg>
