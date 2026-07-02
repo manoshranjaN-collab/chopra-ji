@@ -1,30 +1,31 @@
 export const site = {
-  name: "Dr Lipsa's Dental Clinic",
-  short: "Dr Lipsa Dental",
-  dentist: "Dr Lipsa Wadhwani",
-  tagline: "Marol & Powai's most loved family dentist.",
-  phone: "099302 29689",
-  phoneHref: "tel:+919930229689",
-  whatsapp: "https://wa.me/919930229689",
-  // TODO: confirm — email is not listed on Google. Replace or remove.
-  email: "hello@drlipsadental.in",
+  name: "Dr Chopra Dental Clinic",
+  short: "Dr Chopra Dental",
+  dentist: "Dr Chopra",
+  tagline: "Straight teeth. Confident smile. Brighter future.",
+  phone: "098281 53307",
+  phoneHref: "tel:+919828153307",
+  whatsapp: "https://wa.me/919828153307",
+  // TODO: confirm — email is not listed on Google. Derived from the clinic website domain.
+  email: "info@drchopradentalclinic.in",
+  website: "https://www.drchopradentalclinic.in",
   address:
-    "Shop No. 19, Tara Srishti CHS, 7 Saki Vihar Rd, opposite L&T Flyover, beside Jio, Marol, Powai, Mumbai, Maharashtra 400072",
-  shortAddress: "Saki Vihar Rd, Marol, Powai, Mumbai 400072",
-  // TODO: confirm full weekly hours. Google shows "Opens 10 am Mon"; closing time unverified.
-  hours: "Mon–Sat · Opens 10:00am",
-  rating: 5.0,
-  reviewCount: 555,
-  // Embedded map centred on the clinic's exact coordinates (Marol/Powai, Mumbai)
+    "4A, Green Nagar, Dalda Factory Road, Near St Paul School, Vasundra Colony, Durgapura, Jaipur, Rajasthan 302018",
+  shortAddress: "Green Nagar, Durgapura, Jaipur 302018",
+  // Google shows "Open · Closes 8:30 pm". Confirm the full weekly schedule.
+  hours: "Mon–Sat · Closes 8:30pm",
+  rating: 4.9,
+  reviewCount: 429,
+  // Embedded map for the clinic (Durgapura, Jaipur). Plus code: VQ2R+29 Jaipur.
   googleMaps:
-    "https://www.google.com/maps?q=19.1219575,72.8911945&z=16&output=embed",
+    "https://www.google.com/maps?q=Dr+Chopra+Dental+Clinic+Green+Nagar+Durgapura+Jaipur&z=16&output=embed",
   // Direct link to the clinic's Google Maps listing
   googleMapsLink:
-    "https://www.google.com/maps/place/Dr+Lipsa%E2%80%99s+Dental+Clinic+%7C+Dr+Lipsa+Wadhwani/@19.1219575,72.8911945,821m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7c9ee5cdc2d87:0x95bdccb8e78a2b9f!8m2!3d19.1219575!4d72.8911945!16s%2Fg%2F11v9_lsrxj",
-  // Notable Google attributes
-  attributes: ["LGBTQ+ friendly", "Women-owned"],
+    "https://www.google.com/maps/search/?api=1&query=Dr+Chopra+Dental+Clinic+Durgapura+Jaipur",
+  // Notable clinic attributes
+  attributes: ["Orthodontics & braces", "Family friendly"],
   social: {
-    // TODO: confirm the exact Instagram handle (Google lists an Instagram link).
+    // TODO: confirm the exact Instagram / Facebook handles.
     instagram: "https://instagram.com/",
     facebook: "",
     youtube: "",
@@ -66,7 +67,7 @@ export const videoTestimonials: VideoTestimonial[] = [
   {
     id: "v1",
     name: "A patient's note",
-    location: "Marol, Powai",
+    location: "Durgapura, Jaipur",
     treatment: "Dental care",
     quote:
       "When someone who has seen the world chooses our clinic for their dental care, it speaks volumes.",
@@ -90,9 +91,9 @@ export type PatientPhoto = {
 };
 
 export const patientPhotos: PatientPhoto[] = [
-  { id: "p1", src: "/patients/01.png", alt: "Happy patient at Dr Lipsa's clinic", span: "normal" },
+  { id: "p1", src: "/patients/01.png", alt: "Happy patient at Dr Chopra Dental Clinic", span: "normal" },
   { id: "p2", src: "/patients/02.png", alt: "Patient after treatment", span: "normal" },
-  { id: "p3", src: "/patients/03.png", alt: "Patient with Dr Lipsa", span: "normal" },
+  { id: "p3", src: "/patients/03.png", alt: "Patient with Dr Chopra", span: "normal" },
   { id: "p4", src: "/patients/04.png", alt: "Happy patient portrait", span: "normal" },
 ];
 
@@ -142,6 +143,33 @@ export const beforeAfterCases: BeforeAfterCase[] = [
 ];
 
 export const services: Service[] = [
+  {
+    slug: "braces-orthodontics",
+    name: "Braces & Orthodontics",
+    short: "Damon, metal, ceramic & aligners",
+    description:
+      "Straighten crooked teeth, close gaps and fix your bite with personalised orthodontic treatment for every age.",
+    longDescription:
+      "Braces do more than straighten teeth — they improve oral health, chewing, facial aesthetics and confidence. We offer Damon (fast) braces, metal braces, ceramic braces and clear aligners, with a treatment plan built around your smile and lifestyle.",
+    duration: "12–24 months",
+    startingPrice: "₹25,000",
+    highlights: [
+      "Damon (fast) braces",
+      "Metal & ceramic braces",
+      "Clear aligners",
+      "Correct gaps, crowding & bite",
+    ],
+    faqs: [
+      {
+        q: "Which type of braces is right for me?",
+        a: "It depends on your case, budget and how discreet you want treatment to be. At your consultation we assess your teeth and walk you through Damon, metal, ceramic and aligner options.",
+      },
+      {
+        q: "How long does treatment take?",
+        a: "Most cases finish in 12–24 months. Damon (fast) braces and mild aligner cases can be quicker. We give you a realistic timeline up front.",
+      },
+    ],
+  },
   {
     slug: "root-canal",
     name: "Painless Root Canal",
@@ -309,7 +337,7 @@ export const services: Service[] = [
 export const faqs = [
   {
     q: "Do you take walk-ins?",
-    a: "We do, but Mumbai traffic being what it is, we'd rather you call ahead so we can have a chair waiting and skip the wait.",
+    a: "We do, but Jaipur traffic being what it is, we'd rather you call ahead so we can have a chair waiting and skip the wait.",
   },
   {
     q: "How do I pay?",

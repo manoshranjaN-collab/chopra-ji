@@ -9,7 +9,7 @@ export default function Hero() {
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-end">
           <div className="lg:col-span-7">
             <div className="eyebrow mb-6">
-              <span>Marol · Powai, Mumbai</span>
+              <span>Durgapura · Jaipur, Rajasthan</span>
             </div>
 
             <h1 className="font-bold text-display-xl text-ink">
@@ -21,9 +21,9 @@ export default function Hero() {
             </h1>
 
             <p className="mt-7 max-w-xl text-lg text-ink-muted leading-relaxed">
-              Painless root canals, lifelike implants and digital smile design
-              — by Dr Lipsa Wadhwani and a team Mumbai quietly considers its
-              best.
+              Braces, painless root canals, lifelike implants and clear
+              aligners — by Dr Chopra and a team Jaipur trusts with its
+              smiles.
             </p>
 
             <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -68,8 +68,8 @@ export default function Hero() {
               <div className="h-8 w-px bg-line hidden sm:block" />
 
               <div className="text-sm text-ink-muted">
-                <span className="text-ink font-medium">12 years</span> of
-                family-first dentistry
+                <span className="text-ink font-medium">Years</span> of
+                trusted, patient-first dentistry
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@ function HeroCard() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=80"
-          alt="Dr Lipsa with a patient at the clinic"
+          alt="Dr Chopra with a patient at the clinic"
           className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
@@ -102,17 +102,17 @@ function HeroCard() {
             By appointment
           </span>
           <span className="chip bg-cream-50/95 border-transparent text-ink">
-            Opens 10 am
+            Closes 8:30 pm
           </span>
         </div>
 
         <div className="absolute bottom-5 left-5 right-5 text-cream-50">
           <div className="text-xl leading-snug font-medium">
-            &ldquo;She made my 7-year-old{" "}
-            <span className="accent">ask</span> for the next visit.&rdquo;
+            &ldquo;Honest, gentle care I&rsquo;ve{" "}
+            <span className="accent">trusted</span> for years.&rdquo;
           </div>
           <div className="mt-2 text-sm opacity-80">
-            — Ritika S., Powai
+            — Vandana S., Jaipur
           </div>
         </div>
       </div>
@@ -120,13 +120,13 @@ function HeroCard() {
       {/* Stat card */}
       <div className="absolute -left-4 sm:-left-8 -bottom-6 card px-5 py-4">
         <div className="flex items-center gap-3">
-          <div className="h-10 w-10 rounded-full bg-gold-300/40 flex items-center justify-center font-bold text-lg text-ink">
-            5★
+          <div className="h-10 w-10 rounded-full bg-gold-300/40 flex items-center justify-center font-bold text-base text-ink">
+            4.9★
           </div>
           <div className="leading-tight">
-            <div className="font-bold text-xl text-ink">555+</div>
+            <div className="font-bold text-xl text-ink">429+</div>
             <div className="text-xs uppercase tracking-widest text-ink-muted">
-              5-star reviews
+              Google reviews
             </div>
           </div>
         </div>

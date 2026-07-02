@@ -41,10 +41,10 @@ export default function Header() {
           <Logo />
           <div className="hidden sm:block">
             <div className="font-bold text-lg leading-none text-ink tracking-tight">
-              Dr Lipsa Wadhwani
+              Dr Chopra Dental Clinic
             </div>
             <div className="text-xs text-ink-muted mt-1">
-              Dental Clinic · Marol, Powai
+              Dental Clinic · Durgapura, Jaipur
             </div>
           </div>
         </Link>
@@ -116,7 +116,7 @@ function Logo() {
       aria-hidden
       className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-teal-600 text-cream-50 font-bold text-base shadow-card"
     >
-      L
+      C
     </span>
   );
 }

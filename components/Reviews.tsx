@@ -3,46 +3,46 @@ import { site } from "@/lib/site";
 
 const reviews = [
   {
-    name: "Aniket M.",
-    location: "Powai",
+    name: "Priyanshi Vijay",
+    location: "Local Guide · Jaipur",
     rating: 5,
-    text: "Got my root canal done in a single sitting. Did not feel a thing. The team explained every step. Best clinic in the Marol–Powai area by a mile.",
-    treatment: "Root canal",
+    text: "I had severe wisdom tooth pain that wouldn't go away. Dr Chopra suggested a minor surgery to remove it. I was very scared before the procedure, but the whole team put me at ease. Highly recommend.",
+    treatment: "Wisdom tooth surgery",
   },
   {
-    name: "Sneha P.",
-    location: "Andheri East",
+    name: "Vandana Sharma",
+    location: "Jaipur",
     rating: 5,
-    text: "I came in for a smile makeover before my wedding. Dr Lipsa designed it on a screen first so I could see the result. My photos look unreal.",
-    treatment: "Smile makeover",
+    text: "I am fortunate to be treated by such a doctor. I've been going to him for eight years. He finds more joy in giving his patients comfort than in making money. A very good doctor.",
+    treatment: "Long-term care",
   },
   {
-    name: "Rakesh B.",
-    location: "Saki Naka",
+    name: "V S Gupta",
+    location: "Jaipur",
     rating: 5,
-    text: "Had three implants placed last year. Eating apples again. The clinic followed up every week — felt like family more than a hospital.",
+    text: "Fully satisfied with my root canal and crown treatment. He is humble and patient-friendly, and the charges are quite reasonable. Highly recommended.",
+    treatment: "Root canal & crown",
+  },
+  {
+    name: "A happy patient",
+    location: "Durgapura, Jaipur",
+    rating: 5,
+    text: "Perfect treatment. Friendly and homely environment, clean and hygienic. Thank you to the whole team.",
+    treatment: "General dentistry",
+  },
+  {
+    name: "Verified patient",
+    location: "Jaipur",
+    rating: 5,
+    text: "Excellent service and the best facility in town. After my implant I've never faced any problem. Really happy with the results.",
     treatment: "Implants",
   },
   {
-    name: "Ananya D.",
-    location: "Ghatkopar",
+    name: "Orthodontic patient",
+    location: "Jaipur",
     rating: 5,
-    text: "My son used to cry at every dentist visit. Now he asks when we are going back. The kids room is a small miracle.",
-    treatment: "Kids dentistry",
-  },
-  {
-    name: "Mihir K.",
-    location: "Vikhroli",
-    rating: 5,
-    text: "Aligners done. Took 9 months. The check-ins over WhatsApp were so easy — I barely had to take time off work.",
-    treatment: "Invisalign",
-  },
-  {
-    name: "Smruti R.",
-    location: "Marol",
-    rating: 5,
-    text: "Whitening session before a wedding shoot. Three shades brighter, zero sensitivity. I keep recommending this place.",
-    treatment: "Whitening",
+    text: "Got my braces done here and my smile has completely changed. The team explained every step and treatment stayed on schedule. Confident smile at last.",
+    treatment: "Braces",
   },
 ];
 
@@ -54,11 +54,11 @@ export default function Reviews() {
           <div className="lg:col-span-7">
             <div className="eyebrow mb-4">Word of mouth</div>
             <h2 className="font-bold text-display-lg text-ink">
-              Rated <span className="accent">5.0</span> by{" "}
+              Rated <span className="accent">4.9</span> by{" "}
               <span className="text-teal-600">{site.reviewCount}+ </span>
-              neighbours
+              patients
               <br />
-              you probably know.
+              across Jaipur.
             </h2>
           </div>
           <div className="lg:col-span-5">

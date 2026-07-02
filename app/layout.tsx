@@ -14,14 +14,14 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: "Dr Lipsa's Dental Clinic — Dentist in Marol, Powai, Mumbai",
+  title: "Dr Chopra Dental Clinic — Dentist in Durgapura, Jaipur",
   description:
-    "Calm, modern dentistry on Saki Vihar Road, Marol (Powai), Mumbai. Rated 5.0 by 555+ patients. Painless root canals, implants, aligners and smile makeovers — by Dr Lipsa Wadhwani.",
-  metadataBase: new URL("https://drlipsadental.example.com"),
+    "Calm, modern dentistry in Green Nagar, Durgapura, Jaipur. Rated 4.9 by 429+ patients. Braces, clear aligners, painless root canals, implants and smile makeovers — by Dr Chopra.",
+  metadataBase: new URL("https://www.drchopradentalclinic.in"),
   openGraph: {
-    title: "Dr Lipsa's Dental Clinic",
+    title: "Dr Chopra Dental Clinic",
     description:
-      "Calm, modern dentistry in Marol, Powai, Mumbai. Rated 5.0 by 555+ patients.",
+      "Calm, modern dentistry in Durgapura, Jaipur. Rated 4.9 by 429+ patients.",
     type: "website",
   },
 };

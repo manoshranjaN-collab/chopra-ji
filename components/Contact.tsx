@@ -35,14 +35,14 @@ export default function Contact() {
           <div className="lg:col-span-5">
             <div className="eyebrow mb-4">Find us</div>
             <h2 className="font-bold text-display-lg text-ink">
-              On Saki Vihar Road,
+              In Green Nagar,
               <br />
-              in <span className="accent text-teal-600">Marol</span>.
+              <span className="accent text-teal-600">Durgapura</span>.
             </h2>
             <p className="mt-6 text-ink-muted max-w-md">
-              Opposite the L&amp;T Flyover and right beside Jio — minutes from
-              Powai and Saki Naka. Step-free entrance and a wheelchair-accessible
-              chair.
+              On Dalda Factory Road, near St Paul School in Vasundra Colony,
+              Durgapura. Easy to reach with a step-free entrance and a
+              wheelchair-accessible chair.
             </p>
 
             <div className="mt-8 space-y-1">
@@ -76,7 +76,7 @@ export default function Contact() {
                 height="100%"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Map to Dr Lipsa's Dental Clinic"
+                title="Map to Dr Chopra Dental Clinic"
                 className="block h-full w-full grayscale-[0.2] contrast-95"
               />
             </div>

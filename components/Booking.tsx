@@ -67,7 +67,7 @@ export default function Booking() {
               {[
                 "Gentle, judgement-free consultations",
                 "EMI options available on major treatments",
-                "Rated 5.0 by 555+ patients on Google",
+                "Rated 4.9 by 429+ patients on Google",
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-teal-600" />
@@ -112,7 +112,7 @@ export default function Booking() {
                         required
                         type="text"
                         name="name"
-                        placeholder="Lipika Mohanty"
+                        placeholder="Your full name"
                         className="input"
                       />
                     </Field>

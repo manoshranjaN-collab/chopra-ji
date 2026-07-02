@@ -20,7 +20,7 @@ export function generateMetadata({
   const service = services.find((s) => s.slug === params.slug);
   if (!service) return { title: "Not found" };
   return {
-    title: `${service.name} in Marol, Powai, Mumbai — ${site.name}`,
+    title: `${service.name} in Durgapura, Jaipur — ${site.name}`,
     description: service.description,
   };
 }

@@ -1,27 +1,27 @@
 import { GraduationCap, Heart, Star, Users } from "lucide-react";
 
-// NOTE: Only the rating/reviews and the women-owned / LGBTQ+-friendly badges
-// are confirmed from the Google listing. The qualification line is a
-// placeholder — replace with Dr Lipsa's actual degrees/affiliations.
+// NOTE: Only the rating/reviews are confirmed from the Google listing. The
+// qualification line is a placeholder — replace with Dr Chopra's actual
+// degrees and affiliations.
 const badges = [
   {
     icon: GraduationCap,
     title: "BDS, MDS", // TODO: confirm exact qualifications
-    sub: "Dr Lipsa Wadhwani",
+    sub: "Dr Chopra",
   },
   {
     icon: Star,
-    title: "Rated 5.0",
-    sub: "555+ Google reviews",
+    title: "Rated 4.9",
+    sub: "429+ Google reviews",
   },
   {
     icon: Heart,
-    title: "Women-owned",
-    sub: "Led by Dr Lipsa",
+    title: "Orthodontics",
+    sub: "Braces & aligners",
   },
   {
     icon: Users,
-    title: "LGBTQ+ friendly",
+    title: "Family friendly",
     sub: "Everyone welcome",
   },
 ];
@@ -36,8 +36,8 @@ export default function About() {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-cream-100 shadow-card">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/lipsa-portrait.png"
-                alt="Dr Lipsa Wadhwani, founder and lead dentist"
+                src="/doctor-portrait.png"
+                alt="Dr Chopra, founder and lead dentist"
                 className="absolute inset-0 h-full w-full object-cover"
               />
             </div>
@@ -46,10 +46,10 @@ export default function About() {
                 Lead dentist
               </div>
               <div className="mt-1 text-2xl font-bold tracking-tight text-ink">
-                Dr Lipsa Wadhwani
+                Dr Chopra
               </div>
               <div className="mt-1 text-sm text-ink-muted">
-                BDS, MDS — Endodontics
+                BDS, MDS — Orthodontics
               </div>
             </div>
           </div>
@@ -58,16 +58,16 @@ export default function About() {
           <div className="lg:col-span-7">
             <div className="eyebrow mb-5">Meet the dentist</div>
             <h2 className="font-bold text-display-lg text-ink">
-              Dr Lipsa — the dentist
+              Dr Chopra — the dentist
               <br />
               who <span className="accent text-teal-600">listens</span> first.
             </h2>
             <div className="mt-7 space-y-5 text-ink-soft leading-relaxed max-w-xl">
               <p>
-                It&rsquo;s the way Dr Lipsa practices — slow, careful, without
+                It&rsquo;s the way Dr Chopra practices — slow, careful, without
                 rushing through your story — that brings patients back with
-                their parents, their children, their colleagues. The 5.0 rating
-                across 555+ reviews is really just that, written down.
+                their parents, their children, their colleagues. The 4.9 rating
+                across 429+ reviews is really just that, written down.
               </p>
               <p>
                 The clinic was built around the belief that dentistry should

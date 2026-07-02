@@ -9,13 +9,13 @@ export default function Footer() {
         <div className="lg:col-span-5">
           <Link href="/" className="inline-flex items-center gap-3">
             <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-cream-50 text-teal-700 font-bold text-lg">
-              L
+              C
             </span>
             <span className="font-bold text-2xl">{site.name}</span>
           </Link>
           <p className="mt-6 max-w-md text-cream-50/80 leading-relaxed">
-            {site.tagline} Twelve years and 12,000 patients later, we're still
-            answering our own phone.
+            {site.tagline} Trusted by families across Jaipur — and we still
+            answer our own phone.
           </p>
           <div className="mt-7 flex gap-3">
             <SocialIcon href={site.social.instagram}>
@@ -105,7 +105,7 @@ export default function Footer() {
             © {new Date().getFullYear()} {site.name}. All rights reserved.
           </p>
           <p>
-            Designed in Mumbai · Crafted with{" "}
+            Made in Jaipur · Crafted with{" "}
             <span className="text-gold-300">care</span>.
           </p>
         </div>

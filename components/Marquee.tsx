@@ -5,12 +5,12 @@ import { site } from "@/lib/site";
 const items = [
   "Painless protocol",
   "Single-sitting RCT",
-  "Digital Smile Design",
-  "Rated 5.0 on Google",
+  "Braces & clear aligners",
+  "Rated 4.9 on Google",
   "Modern sterilisation",
   "EMI options available",
-  "Women-owned",
-  "LGBTQ+ friendly",
+  "Damon fast braces",
+  "Family friendly",
 ];
 
 export default function Marquee() {
