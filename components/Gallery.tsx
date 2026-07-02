@@ -18,8 +18,9 @@ export default function Gallery() {
             </h2>
           </div>
           <p className="md:max-w-sm text-ink-muted">
-            Drag the handle across each photo to reveal the result. Every case
-            shown here is shared with the patient&rsquo;s written permission.
+            Drag the handle across each photo to reveal the result. Real patient
+            cases are shared with written permission; tiles marked
+            &ldquo;Illustrative&rdquo; are representative examples.
           </p>
         </div>
 
@@ -38,11 +39,13 @@ function BeforeAfter({
   treatment,
   before,
   after,
+  illustrative,
 }: {
   title: string;
   treatment: string;
   before: string;
   after: string;
+  illustrative?: boolean;
 }) {
   const [pos, setPos] = useState(50);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -134,9 +137,16 @@ function BeforeAfter({
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-ink/70 to-transparent" />
       </div>
 
-      <figcaption className="mt-3 flex items-baseline justify-between">
-        <span className="font-bold text-lg text-ink">{title}</span>
-        <span className="text-sm text-ink-muted">{treatment}</span>
+      <figcaption className="mt-3 flex items-baseline justify-between gap-3">
+        <span className="font-bold text-lg text-ink">
+          {title}
+          {illustrative && (
+            <span className="ml-2 align-middle text-[10px] font-medium uppercase tracking-wide text-ink-muted border border-line rounded-full px-2 py-0.5">
+              Illustrative
+            </span>
+          )}
+        </span>
+        <span className="text-sm text-ink-muted shrink-0">{treatment}</span>
       </figcaption>
     </figure>
   );

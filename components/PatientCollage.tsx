@@ -8,14 +8,15 @@ export default function PatientCollage() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <div className="max-w-2xl">
             <div className="eyebrow mb-4">Happy patients</div>
-            <h2 className="text-display-lg text-ink">
+            <h2 className="font-extrabold text-display-lg text-ink">
               The faces behind the{" "}
-              <span className="accent text-teal-600">4.9</span>.
+              <span className="accent text-teal-600">4.9★</span>{" "}
+              on Google.
             </h2>
           </div>
           <p className="md:max-w-xs text-ink-muted">
-            Real patients, real smiles — captured at the clinic and shared with
-            their consent.
+            Warm, confident smiles — the everyday feeling at the clinic.
+            Illustrative images; real patient photos coming soon.
           </p>
         </div>
 

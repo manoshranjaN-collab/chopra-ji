@@ -57,7 +57,7 @@ export default function About() {
           {/* Story */}
           <div className="lg:col-span-7">
             <div className="eyebrow mb-5">Meet the dentist</div>
-            <h2 className="font-bold text-display-lg text-ink">
+            <h2 className="font-extrabold text-display-lg text-ink">
               Dr Chopra — the dentist
               <br />
               who <span className="accent text-teal-600">listens</span> first.

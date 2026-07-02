@@ -116,6 +116,8 @@ export type BeforeAfterCase = {
   treatment: string;
   before: string;
   after: string;
+  // true = AI-generated illustration, not a real patient result
+  illustrative?: boolean;
 };
 
 export const beforeAfterCases: BeforeAfterCase[] = [
@@ -123,22 +125,24 @@ export const beforeAfterCases: BeforeAfterCase[] = [
     id: "c1",
     title: "Smile makeover",
     treatment: "Veneers",
-    before: "/cases/placeholder-before.svg",
-    after: "/cases/placeholder-after.svg",
+    before: "/cases/smile-makeover-before.png",
+    after: "/cases/smile-makeover-after.png",
   },
   {
     id: "c2",
     title: "Full-mouth rehab",
     treatment: "Implants",
-    before: "/cases/placeholder-before.svg",
-    after: "/cases/placeholder-after.svg",
+    before: "/cases/implants-before.png",
+    after: "/cases/implants-after.png",
+    illustrative: true,
   },
   {
     id: "c3",
     title: "Aligner treatment",
     treatment: "Invisible aligners",
-    before: "/cases/placeholder-before.svg",
-    after: "/cases/placeholder-after.svg",
+    before: "/cases/aligners-before.png",
+    after: "/cases/aligners-after.png",
+    illustrative: true,
   },
 ];
 
