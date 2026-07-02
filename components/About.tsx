@@ -33,12 +33,12 @@ export default function About() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           {/* Portrait + signature */}
           <div className="lg:col-span-5 relative">
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden bg-cream-100 shadow-card">
+            <div className="relative aspect-[2/3] rounded-3xl overflow-hidden bg-cream-100 shadow-card">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/doctor-portrait.png"
                 alt="Dr Chopra, founder and lead dentist"
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover object-top"
               />
             </div>
             <div className="absolute -bottom-6 -right-4 sm:right-6 card px-5 py-4 w-[230px]">

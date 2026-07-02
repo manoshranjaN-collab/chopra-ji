@@ -10,7 +10,7 @@ export default function PatientCollage() {
             <div className="eyebrow mb-4">Happy patients</div>
             <h2 className="font-extrabold text-display-lg text-ink">
               The faces behind the{" "}
-              <span className="accent text-teal-600">4.9★</span>{" "}
+              <span className="accent text-teal-600">4.9 stars</span>{" "}
               on Google.
             </h2>
           </div>
