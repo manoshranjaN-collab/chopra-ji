@@ -5,18 +5,21 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MobileCTA from "@/components/MobileCTA";
 import Reviews from "@/components/Reviews";
-import { services, site } from "@/lib/site";
+import { services as defaultServices, site as defaultSite } from "@/lib/site";
+import { getServices, getSiteSettings } from "@/lib/content";
 import type { Metadata } from "next";
 
 export function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
+  return defaultServices.map((s) => ({ slug: s.slug }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}): Metadata {
+}): Promise<Metadata> {
+  const services = await getServices();
+  const site = await getSiteSettings();
   const service = services.find((s) => s.slug === params.slug);
   if (!service) return { title: "Not found" };
   return {
@@ -25,11 +28,13 @@ export function generateMetadata({
   };
 }
 
-export default function ServicePage({
+export default async function ServicePage({
   params,
 }: {
   params: { slug: string };
 }) {
+  const services = await getServices();
+  const site = await getSiteSettings();
   const service = services.find((s) => s.slug === params.slug);
   if (!service) notFound();
 
@@ -37,7 +42,7 @@ export default function ServicePage({
 
   return (
     <>
-      <Header />
+      <Header site={site} />
       <main className="pb-24 lg:pb-0">
         {/* Hero */}
         <section className="paper pt-28 sm:pt-32 lg:pt-40 pb-16">
@@ -168,8 +173,8 @@ export default function ServicePage({
           </div>
         </section>
       </main>
-      <Footer />
-      <MobileCTA />
+      <Footer services={services} site={site} />
+      <MobileCTA site={site} />
     </>
   );
 }

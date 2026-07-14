@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { Calendar, Phone } from "lucide-react";
-import { site } from "@/lib/site";
+import { site as defaultSite } from "@/lib/site";
 
-export default function MobileCTA() {
+export default function MobileCTA({
+  site = defaultSite,
+}: {
+  site?: typeof defaultSite;
+}) {
   return (
     <div className="lg:hidden fixed inset-x-0 bottom-0 z-40 border-t border-line bg-cream-50/95 backdrop-blur-md">
       <div className="container flex items-center gap-3 py-3">

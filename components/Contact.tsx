@@ -1,33 +1,37 @@
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
-import { site } from "@/lib/site";
+import { site as defaultSite } from "@/lib/site";
 
-const details = [
-  {
-    icon: MapPin,
-    label: "Visit",
-    value: site.address,
-    href: site.googleMapsLink,
-  },
-  {
-    icon: Clock,
-    label: "Hours",
-    value: site.hours,
-  },
-  {
-    icon: Phone,
-    label: "Call",
-    value: site.phone,
-    href: site.phoneHref,
-  },
-  {
-    icon: Mail,
-    label: "Email",
-    value: site.email,
-    href: `mailto:${site.email}`,
-  },
-];
+export default function Contact({
+  site = defaultSite,
+}: {
+  site?: typeof defaultSite;
+}) {
+  const details = [
+    {
+      icon: MapPin,
+      label: "Visit",
+      value: site.address,
+      href: site.googleMapsLink,
+    },
+    {
+      icon: Clock,
+      label: "Hours",
+      value: site.hours,
+    },
+    {
+      icon: Phone,
+      label: "Call",
+      value: site.phone,
+      href: site.phoneHref,
+    },
+    {
+      icon: Mail,
+      label: "Email",
+      value: site.email,
+      href: `mailto:${site.email}`,
+    },
+  ];
 
-export default function Contact() {
   return (
     <section id="contact" className="section">
       <div className="container">

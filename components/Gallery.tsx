@@ -2,9 +2,16 @@
 
 import { useCallback, useRef, useState } from "react";
 import { ChevronsLeftRight } from "lucide-react";
-import { beforeAfterCases } from "@/lib/site";
+import {
+  beforeAfterCases as defaultBeforeAfterCases,
+  type BeforeAfterCase,
+} from "@/lib/site";
 
-export default function Gallery() {
+export default function Gallery({
+  cases = defaultBeforeAfterCases,
+}: {
+  cases?: BeforeAfterCase[];
+}) {
   return (
     <section id="gallery" className="section">
       <div className="container">
@@ -25,7 +32,7 @@ export default function Gallery() {
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {beforeAfterCases.map((c) => (
+          {cases.map((c) => (
             <BeforeAfter key={c.id} {...c} />
           ))}
         </div>

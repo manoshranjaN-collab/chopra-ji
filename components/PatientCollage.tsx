@@ -1,7 +1,14 @@
 import { ImageIcon } from "lucide-react";
-import { patientPhotos } from "@/lib/site";
+import {
+  patientPhotos as defaultPatientPhotos,
+  type PatientPhoto,
+} from "@/lib/site";
 
-export default function PatientCollage() {
+export default function PatientCollage({
+  photos = defaultPatientPhotos,
+}: {
+  photos?: PatientPhoto[];
+}) {
   return (
     <section id="patients" className="section bg-cream-100/60 hairline border-y">
       <div className="container">
@@ -21,7 +28,7 @@ export default function PatientCollage() {
         </div>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-          {patientPhotos.map((p) => (
+          {photos.map((p) => (
             <figure
               key={p.id}
               className="group relative aspect-[542/658] overflow-hidden rounded-2xl border border-line bg-cream-100"

@@ -2,9 +2,15 @@
 
 import { useState } from "react";
 import { ArrowRight, Calendar, Check, Phone } from "lucide-react";
-import { services, site } from "@/lib/site";
+import { services as defaultServices, site as defaultSite, type Service } from "@/lib/site";
 
-export default function Booking() {
+export default function Booking({
+  services = defaultServices,
+  site = defaultSite,
+}: {
+  services?: Service[];
+  site?: typeof defaultSite;
+}) {
   const [submitted, setSubmitted] = useState(false);
 
   return (
@@ -67,7 +73,7 @@ export default function Booking() {
               {[
                 "Gentle, judgement-free consultations",
                 "EMI options available on major treatments",
-                "Rated 4.9 by 429+ patients on Google",
+                `Rated ${site.rating.toFixed(1)} by ${site.reviewCount}+ patients on Google`,
               ].map((item) => (
                 <li key={item} className="flex items-center gap-2">
                   <Check className="h-4 w-4 text-teal-600" />

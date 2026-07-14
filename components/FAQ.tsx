@@ -2,9 +2,13 @@
 
 import { useState } from "react";
 import { Minus, Plus } from "lucide-react";
-import { faqs } from "@/lib/site";
+import { faqs as defaultFaqs } from "@/lib/site";
 
-export default function FAQ() {
+export default function FAQ({
+  faqs = defaultFaqs,
+}: {
+  faqs?: { q: string; a: string }[];
+}) {
   const [open, setOpen] = useState<number | null>(0);
   return (
     <section id="faq" className="section bg-cream-100/60 hairline border-y">

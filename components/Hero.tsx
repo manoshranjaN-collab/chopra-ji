@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { ArrowRight, Star } from "lucide-react";
-import { site } from "@/lib/site";
+import { site as defaultSite } from "@/lib/site";
 
-export default function Hero() {
+export default function Hero({
+  site = defaultSite,
+}: {
+  site?: typeof defaultSite;
+}) {
   return (
     <section className="paper relative overflow-hidden pt-28 sm:pt-32 lg:pt-40 pb-20">
       <div className="container relative">

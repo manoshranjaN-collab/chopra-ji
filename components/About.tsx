@@ -3,30 +3,42 @@ import { GraduationCap, Heart, Star, Users } from "lucide-react";
 // NOTE: Only the rating/reviews are confirmed from the Google listing. The
 // qualification line is a placeholder — replace with Dr Chopra's actual
 // degrees and affiliations.
-const badges = [
-  {
-    icon: GraduationCap,
-    title: "BDS, MDS", // TODO: confirm exact qualifications
-    sub: "Dr Chopra",
-  },
-  {
-    icon: Star,
-    title: "Rated 4.9",
-    sub: "429+ Google reviews",
-  },
-  {
-    icon: Heart,
-    title: "Orthodontics",
-    sub: "Braces & aligners",
-  },
-  {
-    icon: Users,
-    title: "Family friendly",
-    sub: "Everyone welcome",
-  },
-];
+function getBadges(dentistName: string, rating: number, reviewCount: number) {
+  return [
+    {
+      icon: GraduationCap,
+      title: "BDS, MDS", // TODO: confirm exact qualifications
+      sub: dentistName,
+    },
+    {
+      icon: Star,
+      title: `Rated ${rating.toFixed(1)}`,
+      sub: `${reviewCount}+ Google reviews`,
+    },
+    {
+      icon: Heart,
+      title: "Orthodontics",
+      sub: "Braces & aligners",
+    },
+    {
+      icon: Users,
+      title: "Family friendly",
+      sub: "Everyone welcome",
+    },
+  ];
+}
 
-export default function About() {
+export default function About({
+  doctorPhotoUrl = "/doctor-portrait.png",
+  dentistName = "Dr Chopra",
+  rating = 4.9,
+  reviewCount = 429,
+}: {
+  doctorPhotoUrl?: string;
+  dentistName?: string;
+  rating?: number;
+  reviewCount?: number;
+}) {
   return (
     <section id="about" className="section">
       <div className="container">
@@ -36,8 +48,8 @@ export default function About() {
             <div className="relative aspect-[2/3] rounded-3xl overflow-hidden bg-cream-100 shadow-card">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/doctor-portrait.png"
-                alt="Dr Chopra, founder and lead dentist"
+                src={doctorPhotoUrl}
+                alt={`${dentistName}, founder and lead dentist`}
                 className="absolute inset-0 h-full w-full object-cover object-top"
               />
             </div>
@@ -46,7 +58,7 @@ export default function About() {
                 Lead dentist
               </div>
               <div className="mt-1 text-2xl font-bold tracking-tight text-ink">
-                Dr Chopra
+                {dentistName}
               </div>
               <div className="mt-1 text-sm text-ink-muted">
                 BDS, MDS — Orthodontics
@@ -58,16 +70,17 @@ export default function About() {
           <div className="lg:col-span-7">
             <div className="eyebrow mb-5">Meet the dentist</div>
             <h2 className="font-extrabold text-display-lg text-ink">
-              Dr Chopra — the dentist
+              {dentistName} — the dentist
               <br />
               who <span className="accent text-teal-600">listens</span> first.
             </h2>
             <div className="mt-7 space-y-5 text-ink-soft leading-relaxed max-w-xl">
               <p>
-                It&rsquo;s the way Dr Chopra practices — slow, careful, without
-                rushing through your story — that brings patients back with
-                their parents, their children, their colleagues. The 4.9 rating
-                across 429+ reviews is really just that, written down.
+                It&rsquo;s the way {dentistName} practices — slow, careful,
+                without rushing through your story — that brings patients back
+                with their parents, their children, their colleagues. The{" "}
+                {rating.toFixed(1)} rating across {reviewCount}+ reviews is
+                really just that, written down.
               </p>
               <p>
                 The clinic was built around the belief that dentistry should
@@ -78,7 +91,7 @@ export default function About() {
             </div>
 
             <div className="mt-10 grid grid-cols-2 gap-4">
-              {badges.map((b) => (
+              {getBadges(dentistName, rating, reviewCount).map((b) => (
                 <div
                   key={b.title}
                   className="flex items-start gap-3 rounded-xl border border-line bg-white/60 p-4"

@@ -2,12 +2,22 @@
 
 import { useRef, useState } from "react";
 import { Play, Quote } from "lucide-react";
-import { site, videoTestimonials } from "@/lib/site";
+import {
+  site,
+  videoTestimonials as defaultVideoTestimonials,
+  type VideoTestimonial,
+} from "@/lib/site";
 
-export default function VideoTestimonials() {
+export default function VideoTestimonials({
+  testimonials = defaultVideoTestimonials,
+  instagramUrl = site.social.instagram,
+}: {
+  testimonials?: VideoTestimonial[];
+  instagramUrl?: string;
+}) {
   const [playing, setPlaying] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
-  const v = videoTestimonials[0];
+  const v = testimonials[0];
   if (!v) return null;
 
   const play = () => {
@@ -81,7 +91,7 @@ export default function VideoTestimonials() {
                 Filmed at the clinic · {v.location}
               </div>
               <a
-                href={site.social.instagram}
+                href={instagramUrl}
                 target="_blank"
                 rel="noreferrer"
                 className="text-teal-600 hover:text-teal-700 underline underline-offset-4"

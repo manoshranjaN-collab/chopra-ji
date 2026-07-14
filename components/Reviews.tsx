@@ -1,7 +1,7 @@
 import { Quote, Star } from "lucide-react";
 import { site } from "@/lib/site";
 
-const reviews = [
+const defaultReviews = [
   {
     name: "Priyanshi Vijay",
     location: "Local Guide · Jaipur",
@@ -46,7 +46,17 @@ const reviews = [
   },
 ];
 
-export default function Reviews() {
+type ReviewItem = (typeof defaultReviews)[number];
+
+export default function Reviews({
+  reviews = defaultReviews,
+  rating = site.rating,
+  reviewCount = site.reviewCount,
+}: {
+  reviews?: ReviewItem[];
+  rating?: number;
+  reviewCount?: number;
+}) {
   return (
     <section id="reviews" className="section bg-cream-100/70 hairline border-y">
       <div className="container">
@@ -54,8 +64,8 @@ export default function Reviews() {
           <div className="lg:col-span-7">
             <div className="eyebrow mb-4">Word of mouth</div>
             <h2 className="font-bold text-display-lg text-ink">
-              Rated <span className="accent">4.9</span> by{" "}
-              <span className="text-teal-600">{site.reviewCount}+ </span>
+              Rated <span className="accent">{rating.toFixed(1)}</span> by{" "}
+              <span className="text-teal-600">{reviewCount}+ </span>
               patients
               <br />
               across Jaipur.
@@ -69,7 +79,7 @@ export default function Reviews() {
                   <div className="text-sm text-ink-muted">Google reviews</div>
                   <div className="flex items-center gap-2">
                     <span className="font-bold text-3xl text-ink">
-                      {site.rating.toFixed(1)}
+                      {rating.toFixed(1)}
                     </span>
                     <div className="flex">
                       {Array.from({ length: 5 }).map((_, i) => (
@@ -83,7 +93,7 @@ export default function Reviews() {
                 </div>
               </div>
               <p className="mt-4 text-sm text-ink-muted">
-                Based on {site.reviewCount}+ verified reviews. Updated weekly.
+                Based on {reviewCount}+ verified reviews. Updated weekly.
               </p>
             </div>
           </div>
@@ -105,7 +115,7 @@ function ReviewCard({
   rating,
   text,
   treatment,
-}: (typeof reviews)[number]) {
+}: ReviewItem) {
   return (
     <article className="relative rounded-2xl bg-white/80 border border-line p-6 shadow-card flex flex-col">
       <Quote className="h-6 w-6 text-gold-400" />

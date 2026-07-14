@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
-import { site } from "@/lib/site";
+import { site as defaultSite } from "@/lib/site";
 import clsx from "clsx";
 
 const nav = [
@@ -16,7 +16,11 @@ const nav = [
   { label: "Contact", href: "/#contact" },
 ];
 
-export default function Header() {
+export default function Header({
+  site = defaultSite,
+}: {
+  site?: typeof defaultSite;
+}) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -41,7 +45,7 @@ export default function Header() {
           <Logo />
           <div className="hidden sm:block">
             <div className="font-bold text-lg leading-none text-ink tracking-tight">
-              Dr Chopra Dental Clinic
+              {site.name}
             </div>
             <div className="text-xs text-ink-muted mt-1">
               Dental Clinic · Durgapura, Jaipur

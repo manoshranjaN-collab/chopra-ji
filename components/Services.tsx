@@ -1,8 +1,12 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { services } from "@/lib/site";
+import { services as defaultServices, type Service } from "@/lib/site";
 
-export default function Services() {
+export default function Services({
+  services = defaultServices,
+}: {
+  services?: Service[];
+}) {
   return (
     <section id="services" className="section">
       <div className="container">
@@ -34,7 +38,7 @@ function ServiceCard({
   service,
   index,
 }: {
-  service: (typeof services)[number];
+  service: Service;
   index: number;
 }) {
   const featured = index === 0;

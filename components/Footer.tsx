@@ -1,8 +1,18 @@
 import Link from "next/link";
 import { Instagram, Facebook, Youtube, ArrowUpRight } from "lucide-react";
-import { services, site } from "@/lib/site";
+import {
+  services as defaultServices,
+  site as defaultSite,
+  type Service,
+} from "@/lib/site";
 
-export default function Footer() {
+export default function Footer({
+  services = defaultServices,
+  site = defaultSite,
+}: {
+  services?: Service[];
+  site?: typeof defaultSite;
+}) {
   return (
     <footer className="bg-teal-700 text-cream-50">
       <div className="container py-20 grid lg:grid-cols-12 gap-10">
